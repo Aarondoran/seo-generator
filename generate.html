@@ -7,56 +7,58 @@
 </head>
 <body>
 
-<main>
+<main class="container">
   <h1>Head Generator</h1>
 
-  <div class="form-group">
-    <label>Page Title</label>
-    <input id="name" required>
-  </div>
+  <form id="generator-form">
+    <div class="form-group">
+      <label for="name">Page Title</label>
+      <input id="name" required>
+    </div>
 
-  <div class="form-group">
-    <label>Website Subtitle</label>
-    <input id="title" required>
-  </div>
+    <div class="form-group">
+      <label for="title">Website Subtitle</label>
+      <input id="title" required>
+    </div>
 
-  <div class="form-group">
-    <label>Website URL</label>
-    <input id="url" required>
-  </div>
+    <div class="form-group">
+      <label for="url">Website URL</label>
+      <input id="url" required>
+    </div>
 
-  <div class="form-group">
-    <label>Description</label>
-    <textarea id="description" required></textarea>
-  </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" required></textarea>
+    </div>
 
-  <div class="form-group">
-    <label>Keywords</label>
-    <textarea id="keywords" required></textarea>
-  </div>
+    <div class="form-group">
+      <label for="keywords">Keywords</label>
+      <textarea id="keywords" required></textarea>
+    </div>
 
-  <div class="form-group">
-    <label>Author</label>
-    <input id="author" required>
-  </div>
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input id="author" required>
+    </div>
 
-  <div class="form-group">
-    <label>Banner Image Path</label>
-    <input id="banner" required>
-  </div>
+    <div class="form-group">
+      <label for="banner">Banner Image Path</label>
+      <input id="banner" required>
+    </div>
 
-  <div class="form-group">
-    <label>Profile Image Path</label>
-    <input id="pfp" required>
-  </div>
+    <div class="form-group">
+      <label for="pfp">Profile Image Path</label>
+      <input id="pfp" required>
+    </div>
 
-  <div class="actions">
-    <button id="generate">Generate</button>
-    <button id="copy">Copy</button>
-  </div>
+    <div class="actions">
+      <button type="button" id="generate">Generate</button>
+      <button type="button" id="copy">Copy</button>
+    </div>
+  </form>
+
+  <pre id="output"></pre>
 </main>
-
-<pre id="output"></pre>
 
 <script src="generate.js"></script>
 </body>
