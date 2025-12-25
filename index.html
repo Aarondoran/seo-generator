@@ -9,31 +9,34 @@
 
 <h1>Website Head Tag Generator</h1>
 
-<label>Site Name</label>
-<input id="name">
-
 <label>Page Title</label>
-<input id="title">
+<input id="name" required>
+
+<label>Website Subtitle</label>
+<input id="title" required>
 
 <label>Website URL</label>
-<input id="url">
+<input id="url" required>
 
 <label>Description</label>
-<textarea id="description"></textarea>
+<textarea id="description" required></textarea>
 
 <label>Keywords</label>
-<textarea id="keywords"></textarea>
+<textarea id="keywords" required></textarea>
 
 <label>Author</label>
-<input id="author">
+<input id="author" required>
 
 <label>Banner Image Path</label>
-<input id="banner">
+<input id="banner" required>
 
 <label>Profile Image Path</label>
-<input id="pfp">
+<input id="pfp" required>
 
-<button id="generate">Generate Head Code</button>
+<div class="actions">
+  <button id="generate">Generate</button>
+  <button id="copy">Copy</button>
+</div>
 
 <pre id="output"></pre>
 
