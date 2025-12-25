@@ -3,47 +3,53 @@ const generateBtn = document.getElementById("generate")
 const copyBtn = document.getElementById("copy")
 
 generateBtn.onclick = () => {
-  const fields = [...document.querySelectorAll("input, textarea")]
-  if (!fields.every(f => f.value.trim())) return
+  const fields = {
+    name: document.getElementById("name"),
+    title: document.getElementById("title"),
+    url: document.getElementById("url"),
+    description: document.getElementById("description"),
+    keywords: document.getElementById("keywords"),
+    author: document.getElementById("author"),
+    banner: document.getElementById("banner"),
+    pfp: document.getElementById("pfp")
+  }
 
-  const name = document.getElementById("name").value
-  const title = document.getElementById("title").value
-  const url = document.getElementById("url").value
-  const description = document.getElementById("description").value
-  const keywords = document.getElementById("keywords").value
-  const author = document.getElementById("author").value
-  const banner = document.getElementById("banner").value
-  const pfp = document.getElementById("pfp").value
+  for (const key in fields) {
+    if (!fields[key].value.trim()) {
+      fields[key].focus()
+      return
+    }
+  }
 
-  output.textContent =
-`<title>${name} | ${title}</title>
+  output.textContent = 
+`<title>${fields.name.value} | ${fields.title.value}</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet" />
-<link rel="canonical" href="${url}">
+<link rel="canonical" href="${fields.url.value}">
 
-<meta name="title" content="${name} | ${title}">
-<meta name="description" content="${description}">
-<meta name="keywords" content="${keywords}">
+<meta name="title" content="${fields.name.value} | ${fields.title.value}">
+<meta name="description" content="${fields.description.value}">
+<meta name="keywords" content="${fields.keywords.value}">
 <meta name="robots" content="index, follow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="English">
 <meta name="revisit-after" content="1 days">
-<meta name="author" content="${author}">
+<meta name="author" content="${fields.author.value}">
 
 <meta property="og:type" content="website" />
-<meta property="og:url" content="${url}" />
-<meta property="og:title" content="${name} | ${title}" />
-<meta property="og:description" content="${description}" />
-<meta property="og:image" content="${banner}" />
-<meta property="og:logo" content="${pfp}" />
+<meta property="og:url" content="${fields.url.value}" />
+<meta property="og:title" content="${fields.name.value} | ${fields.title.value}" />
+<meta property="og:description" content="${fields.description.value}" />
+<meta property="og:image" content="${fields.banner.value}" />
+<meta property="og:logo" content="${fields.pfp.value}" />
 
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="${url}" />
-<meta property="twitter:title" content="${name} | ${title}" />
-<meta property="twitter:description" content="${description}" />
-<meta property="twitter:image" content="${banner}" />`
+<meta property="twitter:url" content="${fields.url.value}" />
+<meta property="twitter:title" content="${fields.name.value} | ${fields.title.value}" />
+<meta property="twitter:description" content="${fields.description.value}" />
+<meta property="twitter:image" content="${fields.banner.value}" />`
 }
 
 copyBtn.onclick = async () => {
