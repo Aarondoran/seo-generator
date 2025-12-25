@@ -1,0 +1,58 @@
+:root {
+  --navbar-bg: rgba(6,6,6,0.95);
+  --navbar-fg: #f2f2f2;
+  --navbar-accent: #7cff00;
+  --navbar-height: 64px;
+  --navbar-padding: 0 48px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--navbar-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--navbar-padding);
+  z-index: 1000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.navbar a {
+  color: var(--navbar-fg);
+  text-decoration: none;
+  margin-left: 24px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: var(--navbar-accent);
+}
+
+.navbar-logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--navbar-accent);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 0 24px;
+  }
+  .navbar a {
+    margin-left: 16px;
+    font-size: 14px;
+  }
+}
