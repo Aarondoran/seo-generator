@@ -2,44 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SEO Head Generator</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Head Generator</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-<h1>Website Head Tag Generator</h1>
+<header>
+  <div class="hero">
+    <h1>
+      <span>Build</span>
+      <span>Perfect</span>
+      <span>Head Tags</span>
+    </h1>
+    <p>
+      Generate production-ready SEO, Open Graph, and social meta tags
+      with precision and zero fluff.
+    </p>
+    <a href="generate.html" class="cta">
+      Open Generator
+    </a>
+  </div>
+</header>
 
-<label>Page Title</label>
-<input id="name" required>
+<section class="features">
+  <div>
+    <h2>SEO-First</h2>
+    <p>Optimized meta structure following real search engine standards.</p>
+  </div>
+  <div>
+    <h2>Developer-Grade</h2>
+    <p>Clean output you can paste directly into production.</p>
+  </div>
+  <div>
+    <h2>Instant</h2>
+    <p>No accounts, no setup, no tracking.</p>
+  </div>
+</section>
 
-<label>Website Subtitle</label>
-<input id="title" required>
+<footer>
+  <span>Head Generator</span>
+</footer>
 
-<label>Website URL</label>
-<input id="url" required>
-
-<label>Description</label>
-<textarea id="description" required></textarea>
-
-<label>Keywords</label>
-<textarea id="keywords" required></textarea>
-
-<label>Author</label>
-<input id="author" required>
-
-<label>Banner Image Path</label>
-<input id="banner" required>
-
-<label>Profile Image Path</label>
-<input id="pfp" required>
-
-<div class="actions">
-  <button id="generate">Generate</button>
-  <button id="copy">Copy</button>
-</div>
-
-<pre id="output"></pre>
-
-<script src="script.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
