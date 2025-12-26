@@ -5,7 +5,17 @@
   --footer-padding: 32px 48px;
 }
 
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer {
+  margin-top: auto;
   width: 100%;
   background: var(--footer-bg);
   color: var(--footer-fg);
