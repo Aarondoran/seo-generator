@@ -11,6 +11,14 @@
 * {
   box-sizing: border-box;
 }
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1;
+}
 
 body {
   margin: 0;
